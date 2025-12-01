@@ -1,6 +1,6 @@
 import express from "express"
-import authRoutes from './app/auth/auth.rotes.js'
-
+import authRoutes from './app/Auth.route.js'
+import 'colors'
 const app = express();
 
 async function main(){
