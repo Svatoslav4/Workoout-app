@@ -4,10 +4,11 @@
   "description": "",
   "license": "ISC",
   "author": "Svyat Sakati",
-  "type": "module",
+  "type":"module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "devDependencies": {
     "add": "^2.0.6",
