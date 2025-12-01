@@ -1,0 +1,21 @@
+{
+  "name": "workoout-app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Svyat Sakati",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "prettierrc": "^0.0.0-5"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
