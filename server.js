@@ -1,13 +1,27 @@
 import express from "express";
-import authRoutes from './auth/Auth.route.js';
+import authRoutes from './app/auth/Auth.route.js';
 import 'colors';
+import dotenv from "dotenv"
+import morgan from 'morgan'
 
-const app = express();
-const port = 8000;
+dotenv.config()
 
-app.use(express.json());
-app.use('/login', authRoutes);  // шлях: http://localhost:8000/login
+function startServer() { 
 
-app.listen(port, () => {
-    console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on http://localhost:${port}`.green.bold);
-});
+    const app = express();
+
+    if (process.env.NODE_ENV=='development') {
+    app.use(morgan('dev'))
+    }
+    app.use(express.json());
+    app.use('/login', authRoutes);  
+
+    const port = process.env.Port || 8000
+
+    app.listen(port, () => {
+    console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on http://localhost:${port}`.green.bold); 
+    });
+
+}
+
+startServer()
